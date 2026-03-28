@@ -4,7 +4,7 @@ python-multipart
 chromadb
 python-dotenv
 docling
+ezdxf
 docling-core
 langchain-text-splitters
 groq
-libxzd
