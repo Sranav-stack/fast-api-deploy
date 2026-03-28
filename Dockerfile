@@ -2,18 +2,21 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+# Force Python to stream logs instantly to the Hugging Face console
+ENV PYTHONUNBUFFERED=1
+
 # Install necessary system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Pre-install CPU-only PyTorch to prevent downloading massive CUDA (GPU) binaries
-RUN pip install --no-cache-dir torch torchvision torchaudio \
+RUN pip install --no-cache-dir --progress-bar off torch torchvision torchaudio \
     --index-url https://download.pytorch.org/whl/cpu
 
 # Copy and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --progress-bar off -r requirements.txt
 
 # Copy the rest of the application code
 COPY . .
