@@ -1,3 +1,11 @@
+---
+title: Fast API Ingestion Cloud Service
+emoji: 🚀
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
 # fast-api-ingestion-cloud-service
 
 This service exposes a FastAPI endpoint to ingest documents and index them into a ChromaDB collection.
