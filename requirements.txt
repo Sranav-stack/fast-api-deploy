@@ -7,3 +7,4 @@ docling
 docling-core
 langchain-text-splitters
 groq
+libxzd

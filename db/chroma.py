@@ -8,7 +8,6 @@ from embedding.bgme import OpenRouterBGEEmbeddingFunction
 from pathlib import Path
 
 load_dotenv()
-print("API-KEY",os.getenv("CHROMA_API_KEY"))
 client = chromadb.CloudClient(
     api_key=os.getenv("CHROMA_API_KEY"),
     tenant=os.getenv("CHROMA_TENET"),

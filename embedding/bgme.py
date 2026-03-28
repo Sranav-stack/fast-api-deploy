@@ -4,7 +4,6 @@ from chromadb.api.types import Documents, EmbeddingFunction, Embeddings
 from dotenv import load_dotenv
 load_dotenv()
 
-print("API Key:", os.getenv("OPENROUTER_API"))
 class OpenRouterBGEEmbeddingFunction(EmbeddingFunction):
     def __init__(self,model: str = "baai/bge-m3"):
         self.api_key = os.getenv("OPENROUTER_API")
