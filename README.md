@@ -80,3 +80,4 @@ curl -X POST "http://localhost:8000/ingest?collection_name=my_collection" \
 ```
 
 The container will write temporary uploads into the `temp/` directory inside the container and clean them up after indexing.
+# fast-api-deploy
